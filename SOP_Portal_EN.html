@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AO Team Campaign SOP 2025 | AnyMind Group</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #F9FAFB;
+    --surface: #FFFFFF;
+    --text-primary: #111827;
+    --text-muted: #6B7280;
+    --border: #E5E7EB;
+    --accent: #065F46;
+    --accent-light: #D1FAE5;
+    --sidebar-w: 240px;
+    --header-h: 56px;
+  }
+
+  html { font-size: 15px; scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+  }
+
+  /* ── HEADER ── */
+  #header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--header-h);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.25rem 0 calc(var(--sidebar-w) + 1.25rem);
+    z-index: 100;
+  }
+
+  #header-brand {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+
+  #header-brand span {
+    color: var(--accent);
+  }
+
+  #role-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: none;
+  }
+
+  .role-tab {
+    padding: 0.4rem 1rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    border: none;
+    background: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+    letter-spacing: 0.01em;
+    margin-bottom: -1px;
+  }
+
+  .role-tab:hover { color: var(--text-primary); }
+  .role-tab.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  /* ── SIDEBAR ── */
+  #sidebar {
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-w);
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 1rem 0;
+    z-index: 90;
+  }
+
+  #sidebar::-webkit-scrollbar { width: 4px; }
+  #sidebar::-webkit-scrollbar-track { background: transparent; }
+  #sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .nav-group-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0.75rem 1rem 0.25rem;
+  }
+
+  .nav-item.nav-hidden { display: none !important; }
+.nav-item {
+    display: block;
+    padding: 0.35rem 1rem;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: color 0.12s, border-color 0.12s, background 0.12s;
+    line-height: 1.4;
+  }
+
+  .nav-item:hover {
+    color: var(--text-primary);
+    background: var(--bg);
+  }
+
+  .nav-item.active {
+    color: var(--accent);
+    border-left-color: var(--accent);
+    background: #F0FDF4;
+    font-weight: 500;
+  }
+
+  .nav-step-badge {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-right: 0.35rem;
+  }
+
+  /* ── MAIN ── */
+  #main {
+    margin-left: var(--sidebar-w);
+    padding-top: calc(var(--header-h) + 2rem);
+    padding-bottom: 4rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    max-width: 860px;
+  }
+
+  /* ── SECTIONS ── */
+  .sop-section {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border);
+    transition: opacity 0.2s;
+  }
+
+  .sop-section:last-child { border-bottom: none; }
+
+  .section-not-relevant {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .not-relevant-label {
+    display: none;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  .section-not-relevant .not-relevant-label { display: block; }
+
+  /* ── TYPOGRAPHY ── */
+  .step-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    margin-top: 1.75rem;
+    line-height: 1.4;
+  }
+
+  h2:first-child { margin-top: 0; }
+
+  h3 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    margin-top: 1.25rem;
+  }
+
+  p {
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-size: 0.9375rem;
+  }
+
+  .section-purpose {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--border);
+    padding-left: 0.75rem;
+  }
+
+  ul, ol {
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li {
+    font-size: 0.9375rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-primary);
+  }
+
+  li::marker { color: var(--text-muted); }
+
+  code {
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    font-size: 0.8125rem;
+    background: #F3F4F6;
+    border: 1px solid var(--border);
+    padding: 0.1em 0.4em;
+    border-radius: 3px;
+    color: #1F2937;
+  }
+
+  pre {
+    background: #F3F4F6;
+    border: 1px solid var(--border);
+    padding: 0.875rem 1rem;
+    font-size: 0.8125rem;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    overflow-x: auto;
+    margin: 0.75rem 0;
+    line-height: 1.5;
+    color: #1F2937;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  a:hover { text-decoration: underline; }
+
+  strong { font-weight: 600; }
+
+  /* ── CALLOUTS ── */
+  .callout {
+    padding: 0.875rem 1rem;
+    margin: 1rem 0;
+    border-left: 4px solid;
+    font-size: 0.9rem;
+  }
+
+  .callout-must {
+    border-color: #16A34A;
+    background: #F0FDF4;
+    color: #14532D;
+  }
+
+  .callout-forbidden {
+    border-color: #DC2626;
+    background: #FEF2F2;
+    color: #7F1D1D;
+  }
+
+  .callout-deadline {
+    border-color: #2563EB;
+    background: #EFF6FF;
+    color: #1E3A8A;
+  }
+
+  .callout-note {
+    border-color: #D97706;
+    background: #FFFBEB;
+    color: #78350F;
+  }
+
+  .callout-label {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+    display: block;
+  }
+
+  .callout p { margin-bottom: 0; color: inherit; font-size: inherit; }
+  .callout ul { margin-bottom: 0; }
+  .callout li { color: inherit; }
+
+  /* ── TABLES ── */
+  .table-wrap { overflow-x: auto; margin: 1rem 0; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  th {
+    background: var(--bg);
+    font-weight: 600;
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    font-size: 0.8125rem;
+    letter-spacing: 0.01em;
+  }
+
+  td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--text-primary);
+  }
+
+  tr:nth-child(even) td { background: #FAFAFA; }
+
+  /* ── ROLE BADGES ── */
+  .role-badges {
+    display: flex;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .role-badge {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    background: var(--bg);
+  }
+
+  .role-badge.ao { border-color: #065F46; color: #065F46; background: #F0FDF4; }
+  .role-badge.ae { border-color: #1D4ED8; color: #1D4ED8; background: #EFF6FF; }
+  .role-badge.mp { border-color: #7C3AED; color: #7C3AED; background: #F5F3FF; }
+
+  /* ── CHECKLIST ── */
+  .checklist { list-style: none; padding-left: 0; }
+  .checklist li {
+    padding: 0.375rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65rem;
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 1.5rem 0;
+  }
+
+  /* ── OVERVIEW FLOW ── */
+  .flow-steps {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    margin: 1.25rem 0;
+  }
+
+  .flow-step {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    white-space: nowrap;
+  }
+
+  .flow-arrow {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    padding: 0 0.25rem;
+    flex-shrink: 0;
+  }
+
+  /* ── THREAD TYPES ── */
+  .thread-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.75rem;
+    margin: 1rem 0;
+  }
+
+  .thread-card {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 0.75rem;
+  }
+
+  .thread-card-label {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+  }
+
+  .thread-card-desc {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  /* ── LINKS SECTION ── */
+  .links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .link-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-size: 0.8125rem;
+    color: var(--accent);
+    text-decoration: none;
+    transition: background 0.12s;
+  }
+
+  .link-item:hover { background: #F0FDF4; text-decoration: none; }
+
+  .link-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: var(--text-muted);
+  }
+
+  /* ── SCROLL TO TOP ── */
+  #scroll-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 36px;
+    height: 36px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--text-muted);
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 200;
+  }
+
+  #scroll-top.visible { opacity: 1; }
+  #scroll-top:hover { background: var(--bg); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    #header { padding-left: 1rem; }
+    #sidebar { display: none; }
+    #main { margin-left: 0; padding-left: 1.25rem; padding-right: 1.25rem; }
+    .links-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div id="header-brand">AO Team Campaign <span>SOP 2025</span> &nbsp;&mdash;&nbsp; AnyMind Group</div>
+  <div id="role-tabs" role="tablist">
+    <button class="role-tab active" data-role="all" onclick="setRole('all')">All Roles</button>
+    <button class="role-tab" data-role="AO" onclick="setRole('AO')">AO Team</button>
+    <button class="role-tab" data-role="AE" onclick="setRole('AE')">AE</button>
+    <button class="role-tab" data-role="MP" onclick="setRole('MP')">Media Planner</button>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;margin-left:20px;padding-left:20px;border-left:1px solid #E5E7EB;">
+    <span style="font-size:12px;color:#6B7280;">Lang</span>
+    <select onchange="window.location.href=this.value" style="font-size:13px;font-family:inherit;color:#111827;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:4px;padding:4px 8px;cursor:pointer;outline:none;">
+      <option value="SOP_Portal_TH.html">TH</option>
+      <option value="SOP_Portal_EN.html" selected>EN</option>
+    </select>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div class="nav-group-label">Overview</div>
+  <a class="nav-item" href="#overview">Overview & Slack Threading</a>
+
+  <div class="nav-group-label">Step 0</div>
+  <a class="nav-item" href="#step-0a"><span class="nav-step-badge">0A</span>Media Plan Review</a>
+  <a class="nav-item" href="#step-0b"><span class="nav-step-badge">0B</span>Kick-off Sync</a>
+
+  <div class="nav-group-label">Steps 1–5</div>
+  <a class="nav-item" href="#step-1"><span class="nav-step-badge">1</span>AE Request</a>
+  <a class="nav-item" href="#step-2"><span class="nav-step-badge">2</span>AO Acknowledge</a>
+  <a class="nav-item" href="#step-3"><span class="nav-step-badge">3</span>Ad Preview &amp; QA</a>
+  <a class="nav-item" href="#step-4"><span class="nav-step-badge">4</span>Optimization</a>
+  <a class="nav-item" href="#step-5"><span class="nav-step-badge">5</span>Reporting</a>
+
+  <div class="nav-group-label">Appendices</div>
+  <a class="nav-item" href="#appendix-a">A — Kick-off Checklist</a>
+  <a class="nav-item" href="#appendix-b">B — Double-Check Guide</a>
+  <a class="nav-item" href="#appendix-c">C — Client Tier Service</a>
+  <a class="nav-item" href="#appendix-d">D — Setup Lead Time</a>
+  <a class="nav-item" href="#appendix-e">E — Report Creation</a>
+  <a class="nav-item" href="#quick-links">Quick Links</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main id="main">
+
+  <!-- ── OVERVIEW ── -->
+  <section class="sop-section" id="overview" data-roles="AO,AE,MP">
+    <div class="not-relevant-label">Not relevant for this role</div>
+    <div class="step-label">Overview</div>
+    <h1>AO Team Campaign SOP 2025</h1>
+    <p class="section-purpose">This SOP covers the full campaign workflow — from media plan submission to final reporting. Follow every step in order. Do not skip steps.</p>
+
+    <h2>Campaign Workflow</h2>
+    <div class="flow-steps">
+      <div class="flow-step">Step 0A<br><small style="color:var(--text-muted);font-weight:400">Media Plan Review</small></div>
+      <span class="flow-arrow">&#8594;</span>
+      <div class="flow-step">Step 0B<br><small style="color:var(--text-muted);font-weight:400">Kick-off Sync</small></div>
+      <span class="flow-arrow">&#8594;</span>
+      <div class="flow-step">Step 1<br><small style="color:var(--text-muted);font-weight:400">AE Request</small></div>
+      <span class="flow-arrow">&#8594;</span>
+      <div class="flow-step">Step 2<br><small style="color:var(--text-muted);font-weight:400">AO Acknowledge</small></div>
+      <span class="flow-arrow">&#8594;</span>
+      <div class="flow-step">Step 3<br><small style="color:var(--text-muted);font-weight:400">Ad Preview &amp; QA</small></div>
+      <span class="flow-arrow">&#8594;</span>
+      <div class="flow-step">Step 4<br><small style="color:var(--text-muted);font-weight:400">Optimization</small></div>
+      <span class="flow-arrow">&#8594;</span>
+      <div class="flow-step">Step 5<br><small style="color:var(--text-muted);font-weight:400">Reporting</small></div>
+    </div>
+
+    <h2>Slack Thread Naming &amp; Mapping</h2>
+    <p>Each Slack channel must have no more than <strong>6 threads</strong>. Each thread must be used only for its assigned purpose.</p>
+    <div class="thread-grid">
+      <div class="thread-card">
+        <div class="thread-card-label">MEDIA PLAN</div>
+        <div class="thread-card-desc">Media plan sharing, review, kick-off confirmation</div>
+      </div>
+      <div class="thread-card">
+        <div class="thread-card-label">SETUP</div>
+        <div class="thread-card-desc">Campaign setup requests and ad preview delivery</div>
+      </div>
+      <div class="thread-card">
+        <div class="thread-card-label">OPTIMIZATION</div>
+        <div class="thread-card-desc">Optimization discussions and actions</div>
+      </div>
+      <div class="thread-card">
+        <div class="thread-card-label">REPORT</div>
+        <div class="thread-card-desc">Performance updates and report delivery</div>
+      </div>
+    </div>
+
+    <h2>Role Guide</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Label</th>
+            <th>Primary Responsibility</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Ad Optimization Team</td><td><span class="role-badge ao">AO</span></td><td>Campaign setup, optimization, reporting, QA</td></tr>
+          <tr><td>Account Executive</td><td><span class="role-badge ae">AE</span></td><td>Client communication, request initiation, approval</td></tr>
+          <tr><td>Media Planner</td><td><span class="role-badge mp">MP</span></td><td>Media plan creation, technical coordination</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── STEP 0A ── -->
+  <section class="sop-section" id="step-0a" data-roles="AO,AE,MP">
+    <div class="not-relevant-label">Not relevant for this role</div>
+    <div class="step-label">Step 0A</div>
+    <h1>Media Plan Review &amp; Approval</h1>
+    <div class="role-badges">
+      <span class="role-badge ao">AO — Review</span>
+      <span class="role-badge mp">MP — Submit</span>
+      <span class="role-badge ae">AE — CC'd</span>
+    </div>
+    <p class="section-purpose">Before any campaign work starts, the Media Plan must be submitted to the AO Lead Team for review. This is required every time. No exceptions.</p>
+
+    <h2>How to Submit (send by email)</h2>
+
+    <h3>Email Format</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Field</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td><strong>To</strong></td><td><a href="mailto:Wirat@anymindgroup.com">Wirat@anymindgroup.com</a></td></tr>
+          <tr><td><strong>CC</strong></td><td>Media Planner Supervisor, BD PIC, <a href="mailto:th-adopt@anymindgroup.com">th-adopt@anymindgroup.com</a></td></tr>
+          <tr><td><strong>Subject</strong></td><td><code>[Media Plan] : [Client Name]_[Campaign name from hubspot]</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Email Body — Required Fields</h3>
+    <p>All of these must be included. Nothing can be missing.</p>
+    <ul>
+      <li>Hubspot Link</li>
+      <li>Media Plan Link</li>
+      <li>Approval Due Date</li>
+      <li>Owner project team</li>
+      <li>Client Product</li>
+      <li>Client Industry</li>
+    </ul>
+
+    <div class="callout callout-must">
+      <span class="callout-label">Required</span>
+      <p>Always CC <a href="mailto:th-adopt@anymindgroup.com" style="color:inherit;font-weight:600">th-adopt@anymindgroup.com</a>. Never forget. No exceptions.</p>
+    </div>
+
+    <div class="callout callout-must">
+      <span class="callout-label">Required</span>
+      <p>The Media Plan must be in <strong>Ad Sheets format only</strong>. No other format is accepted.</p>
+    </div>
+
+    <h2>Deadlines</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Type</th><th>Requirement</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Normal</strong></td><td>Submit at least 1 business day before the approval is needed</td></tr>
+          <tr><td><strong>Urgent</strong> (less than 1 BD)</td><td>Notify the Lead Team (Mike-Wirat) at least 3 hours in advance</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout callout-note">
+      <span class="callout-label">Note</span>
+      <p>If you submit an urgent request without prior notification, the Lead Team will set the approval due date.</p>
+    </div>
+  </section>
+
+  <!-- ── STEP 0B ── -->
+  <section class="sop-section" id="step-0b" data-roles="AO,AE,MP">
+    <div class="not-relevant-label">Not relevant for this role</div>
+    <div class="step-label">Step 0B</div>
+    <h1>Pre-Campaign Readiness &amp; Kick-off Sync</h1>
+    <div class="role-badges">
+      <span class="role-badge ao">AO</span>
+      <span class="role-badge ae">AE</span>
+      <span class="role-badge mp">MP</span>
+    </div>
+    <p class="section-purpose">This step applies to Tier S, A, and B campaigns only. Tier C and Tier D campaigns skip this step entirely.</p>
+
+    <h2>Technical Readiness Check</h2>
+    <p>This applies to lower funnel campaigns: Conversion, Lead Gen, CPAS, and Application.</p>
+    <div class="callout callout-deadline">
+      <span class="callout-label">Deadline</span>
+      <p>AE/Planner must send a Tech Audit request in Slack at least <strong>14 business days</strong> before the campaign starts.</p>
+    </div>
+    <h3>Slack Thread Label for Tech Audit</h3>
+    <pre>"INQUIRY - Request to review and implementation for the conversion campaign tracking"</pre>
+    <div class="callout callout-forbidden">
+      <span class="callout-label">Forbidden</span>
+      <p>If the Tech Check fails, no campaign setup request can be made. The issue must be fully resolved first.</p>
+    </div>
+
+    <h2>Meeting Rules</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Campaign Type</th><th>Kick-off Timing Requirement</th></tr></thead>
+        <tbody>
+          <tr><td>New campaign with new SOs</td><td>At least <strong>3 business days</strong> before setup request</td></tr>
+          <tr><td>Lower funnel campaigns</td><td>At least <strong>14 business days</strong> before campaign start</td></tr>
+          <tr><td>AWO (Always-on)</td><td>Short kick-off at start of each month — at least 3 BD before new campaigns</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout callout-must">
+      <span class="callout-label">Required</span>
+      <p>Always invite <a href="mailto:planner-as-team-meeting@anymindgroup.com" style="color:inherit;font-weight:600">planner-as-team-meeting@anymindgroup.com</a> to every kick-off meeting.</p>
+    </div>
+
+    <h2>After Kick-off — AO PIC Must Post in Slack</h2>
+    <p>AO PIC must post a summary in the Slack <strong>MEDIA PLAN</strong> thread after the kick-off:</p>
+    <pre>"AO Confirm ✅ Timeline confirmed..."</pre>
+    <div class="callout callout-forbidden">
+      <span class="callout-label">Forbidden</span>
+      <p>If there is no in-meeting summary AND no Slack message after the meeting, the kick-off is not considered complete.</p>
+    </div>
+
+    <h2>Ad Account &amp; Budget Top-up</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Platform</th><th>Process</th><th>Link</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Meta</strong></td>
+            <td>Fill the request sheet &rarr; set status = "waiting" &rarr; run script &rarr; click "Send to Slack"</td>
+            <td><a href="https://docs.google.com/spreadsheets/d/1j-9nfThTcKIAb2Npxq0ABG3YonfzWySso-cZBF_J_48/edit?gid=1881615856#gid=1881615856" target="_blank" rel="noopener">Meta/TikTok Top-up Sheet</a></td>
+          </tr>
+          <tr>
+            <td><strong>TikTok</strong></td>
+            <td>Fill sheet with account name, ID, amount, currency &rarr; same script process</td>
+            <td><a href="https://docs.google.com/spreadsheets/d/1j-9nfThTcKIAb2Npxq0ABG3YonfzWySso-cZBF_J_48/edit?gid=1881615856#gid=1881615856" target="_blank" rel="noopener">Meta/TikTok Top-up Sheet</a></td>
+          </tr>
+          <tr>
+            <td><strong>Google Ads</strong></td>
+            <td>Self-service top-up &rarr; record in "Top up Google" tab</td>
+            <td><a href="https://docs.google.com/spreadsheets/d/1j-9nfThTcKIAb2Npxq0ABG3YonfzWySso-cZBF_J_48/edit?gid=290704826#gid=290704826" target="_blank" rel="noopener">Google Top-up Tab</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout-note">
+      <span class="callout-label">Note</span>
+      <p>After SO Sign and Hubspot link are confirmed, the PIC can request the Manager to create ad accounts on all platforms via Slack.</p>
+    </div>
+
+    <h2>Kick-off Template</h2>
+    <p><a href="https://docs.google.com/presentation/d/19MHeTSDiFWKqbuaA6SdnKPGfGZHvVs-GPMG9zF58BgU/edit" target="_blank" rel="noopener">Open Kick-off Template</a></p>
+  </section>
+
+  <!-- ── STEP 1 ── -->
+  <section class="sop-section" id="step-1" data-roles="AE,MP">
+    <div class="not-relevant-label">Not relevant for this role</div>
+    <div class="step-label">Step 1</div>
+    <h1>AE Request</h1>
+    <div class="role-badges">
+      <span class="role-badge ae">AE — Primary</span>
+      <span class="role-badge mp">MP — Provide Ad Sheet</span>
+    </div>
+    <p class="section-purpose">AE initiates the setup request in Slack. The request must be complete and correctly formatted. Incomplete requests will not be processed.</p>
+
+    <h2>Slack Thread Name</h2>
+    <p>Open a new Slack thread using this format:</p>
+    <pre>SETUP - (Country)_Campaign name_Platform_CAM ID_Duration</pre>
+    <p><strong>Example:</strong></p>
+    <pre>SETUP - (TH)_YumYumSD2025_Meta_CAM123456789_Nov-Dec2025</pre>
+
+    <h2>Request Must Include All of These</h2>
+    <ul>
+      <li>Hubspot Link</li>
+      <li>Setup row range (in Ad Sheet)</li>
+      <li>Number of campaigns and campaign objective</li>
+      <li>Start date and End date</li>
+      <li>Ad Sheet link — use the "Get link to this cell" function: <a href="https://docs.google.com/spreadsheets/d/1j-9nfThTcKIAb2Npxq0ABG3YonfzWySso-cZBF_J_48/edit?gid=1332768816#gid=1332768816" target="_blank" rel="noopener">Ad Request Sheet</a></li>
+      <li>Screenshot of the media plan</li>
+    </ul>
+
+    <div class="callout callout-forbidden">
+      <span class="callout-label">Forbidden</span>
+      <p>Without both <strong>SO Sign</strong> and <strong>Hubspot link</strong>, the AO team will not process any request. Both are required before any work can begin.</p>
+    </div>
+
+    <h2>Cut-off Times — Tier S, A, B (Same-Day Execution)</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Number of Campaigns</th><th>Cut-off Time</th></tr></thead>
+        <tbody>
+          <tr><td>1–5 campaigns</td><td>Before 16:00</td></tr>
+          <tr><td>6–10 campaigns</td><td>Before 15:00</td></tr>
+          <tr><td>More than 10 campaigns</td><td>Notify AO PIC at least <strong>2 business days</strong> in advance</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout callout-note">
+      <span class="callout-label">Note</span>
+      <p>If the request is submitted after the cut-off time, work will be done the next business day. No exceptions.</p>
+    </div>
+
+    <h2>Tier C and D</h2>
+    <div class="callout callout-deadline">
+      <span class="callout-label">Deadline</span>
+      <p>Tier C and D must submit the request <strong>2 business days in advance</strong>. There is no same-day priority. No exceptions.</p>
+    </div>
+  </section>
+
+  <!-- ── STEP 2 ── -->
+  <section class="sop-section" id="step-2" data-roles="AO">
+    <div class="not-relevant-label">Not relevant for this role</div>
+    <div class="step-label">Step 2</div>
+    <h1>AO Acknowledge</h1>
+    <div class="role-badges">
+      <span class="role-badge ao">AO — Primary</span>
+    </div>
+    <p class="section-purpose">AO PIC confirms receipt of the setup request and gives a clear delivery ETA. This keeps the AE and Media Planner informed.</p>
+
+    <h2>Acknowledge Requirements</h2>
+    <div class="callout callout-deadline">
+      <span class="callout-label">Deadline</span>
+      <p>AO PIC must reply within <strong>2 hours</strong> in the same Slack thread, with a clear ETA for Ad Preview delivery.</p>
+    </div>
+
+    <h3>Reply Template</h3>
+    <pre>"Received ✅ — @AE_Name, Ad preview will be sent by 16:00 today."</pre>
+
+    <h3>Rules</h3>
+    <ul>
+      <li>Reply in the original thread only. Keep all history in one place.</li>
+      <li>State the ETA clearly. Do not use vague language.</li>
+    </ul>
+
+    <div class="callout callout-forbidden">
+      <span class="callout-label">Forbidden</span>
+      <p>If the account brief does not specify enabling special features (such as Advantage+ on Meta), do <strong>NOT</strong> enable them under any circumstances.</p>
+    </div>
+  </section>
+
+  <!-- ── STEP 3 ── -->
+  <section class="sop-section" id="step-3" data-roles="AO,AE,MP">
+    <div class="not-relevant-label">Not relevant for this role</div>
+    <div class="step-label">Step 3</div>
+    <h1>Ad Preview, QA &amp; Approval</h1>
+    <div class="role-badges">
+      <span class="role-badge ao">AO — Create + QA</span>
+      <span class="role-badge ae">AE — Approve</span>
+      <span class="role-badge mp">MP — Approve</span>
+    </div>
+    <p class="section-purpose">AO PIC creates the Ad Preview slide, runs a QA check, and sends it for approval. AE and Media Planner must approve before the campaign goes live.</p>
+
+    <h2>QA Process — Required Every Time</h2>
+    <p>Both checks must be completed before sending the preview to AE.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Check</th><th>Who</th><th>When</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Self-check</strong></td><td>AO PIC</td><td>Before sending</td></tr>
+          <tr><td><strong>Peer-check</strong></td><td>Another team member</td><td>Within 2 days</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Use the Appendix B checklist for both checks.</p>
+
+    <h2>Ad Preview Slide Structure</h2>
+    <p><a href="https://docs.google.com/presentation/d/1f_WkG5joLAXFRXjPJEDfcvqpcKtab_zUKkZvx_vKvyA/edit" target="_blank" rel="noopener">Open Ad Preview Template</a></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Slide</th><th>Content</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Slide 1</strong></td><td>Date, AO PIC name, client name, campaign, platform</td></tr>
+          <tr><td><strong>Slide 2</strong></td><td>Overview — number of campaigns in preview + remarks</td></tr>
+          <tr><td><strong>Slide 3+</strong></td><td>Screenshots at every level: Campaign &rarr; Ad Set &rarr; Ad. For Search campaigns, also include Keywords + Text Ads.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Approval Deadlines</h2>
+    <div class="callout callout-deadline">
+      <span class="callout-label">Deadline</span>
+      <ul>
+        <li>AE/Media Planner must approve within <strong>2 hours</strong>.</li>
+        <li>If no confirmation is received within <strong>6 hours</strong>, the campaign will be activated automatically.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── STEP 4 ── -->
+  <section class="sop-section" id="step-4" data-roles="AO,MP,AE">
+    <div class="not-relevant-label">Not relevant for this role</div>
+    <div class="step-label">Step 4</div>
+    <h1>Optimization &amp; Monitoring</h1>
+    <div class="role-badges">
+      <span class="role-badge ao">AO — Primary</span>
+      <span class="role-badge mp">MP — Communication point</span>
+      <span class="role-badge ae">AE — CC'd only</span>
+    </div>
+    <p class="section-purpose">AO PIC monitors performance daily and takes action when needed. All communication goes to the Media Planner directly.</p>
+
+    <h2>Daily Tasks — AO PIC</h2>
+    <ul>
+      <li>Check Performance ad alert emails <strong>twice a day</strong> — morning and evening</li>
+      <li>Update the Tracking Sheet (Spend pacing / Achievement rate / Date pacing) <strong>before noon every day</strong></li>
+      <li>Log every optimization action in the Optimization Action Log</li>
+    </ul>
+
+    <h2>Slack Performance Update Frequency (REPORT thread)</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tier</th><th>Update Frequency</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Tier S</strong></td><td>Every day</td></tr>
+          <tr><td><strong>Tier A</strong></td><td>Every day</td></tr>
+          <tr><td><strong>Tier B</strong></td><td>3 times per week</td></tr>
+          <tr><td><strong>Tier C</strong></td><td>2 times per week</td></tr>
+          <tr><td><strong>Tier D</strong></td><td>1 time per week</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout callout-must">
+      <span class="callout-label">Required</span>
+      <p>Even if the update frequency is lower, AO PIC must monitor performance every day. No exceptions.</p>
+    </div>
+
+    <h2>Sync Sessions</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tier</th><th>Session Type</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Tier S</strong></td><td>Weekly update session</td></tr>
+          <tr><td><strong>Tier A</strong></td><td>Bi-weekly update session (on days agreed at kick-off)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Communication Rule</h2>
+    <div class="callout callout-must">
+      <span class="callout-label">Required</span>
+      <p>All optimization and technical discussions go <strong>directly to the Media Planner</strong>. AE is only CC'd. AE must not be the primary contact for optimization topics.</p>
+    </div>
+
+    <h2>Key Principle</h2>
+    <div class="callout callout-note">
+      <span class="callout-label">Important</span>
+      <p>Negotiating a margin reduction is <strong>NOT</strong> optimization. It is the last option. Use it only after all other optimization methods have been tried.</p>
+    </div>
+  </section>
+
+  <!-- ── STEP 5 ── -->
+  <section class="sop-section" id="step-5" data-roles="AO,AE,MP">
+    <div class="not-relevant-label">Not relevant for this role</div>
+    <div class="step-label">Step 5</div>
+    <h1>Reporting</h1>
+    <div class="role-badges">
+      <span class="role-badge ao">AO — Primary</span>
+      <span class="role-badge ae">AE — Receive + Present</span>
+      <span class="role-badge mp">MP — Receive</span>
+    </div>
+    <p class="section-purpose">AO PIC creates and delivers all reports. Report type and format depend on the client tier.</p>
+
+    <h2>Dashboard by Tier</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Tier</th><th>Dashboard</th><th>Periodic Report</th><th>Ad-hoc</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>S</strong></td><td>Looker Studio (real-time, custom)</td><td>Monthly + Quarterly + Yearly</td><td>Priority</td></tr>
+          <tr><td><strong>A</strong></td><td>Looker Studio (real-time, standard)</td><td>Monthly</td><td>Priority</td></tr>
+          <tr><td><strong>B</strong></td><td>AnyAI DM or Google Sheets</td><td>Monthly</td><td>1 time/month</td></tr>
+          <tr><td><strong>C</strong></td><td>AnyAI DM or Google Sheets</td><td>Monthly</td><td>None</td></tr>
+          <tr><td><strong>D</strong></td><td>None</td><td>Monthly or end-of-campaign</td><td>None</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><a href="https://lookerstudio.google.com/reporting/86ebc280-ee88-44ba-a486-2542d971f3e6/page/p_bkwr5he0zd" target="_blank" rel="noopener">Open Looker Studio Template</a></p>
+
+    <h2>Real-Time Dashboard</h2>
+    <div class="callout callout-deadline">
+      <span class="callout-label">Deadline</span>
+      <p>Create the dashboard within <strong>3 business days</strong> after the campaign goes live.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tier</th><th>Modification Rules</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Tier S</strong></td><td>Custom metrics. Can be modified max <strong>2 times per month</strong>, with 2 BD lead time per change.</td></tr>
+          <tr><td><strong>Tier A</strong></td><td>Standard / fixed metrics. No modifications allowed after creation.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>End-of-Campaign / Monthly Report</h2>
+    <div class="callout callout-deadline">
+      <span class="callout-label">Deadline</span>
+      <p>Deliver within <strong>7 business days</strong> after the campaign ends.</p>
+    </div>
+    <ul>
+      <li>Deliverables: Raw Data + Insights</li>
+      <li>Additional data requests: submit at least <strong>3 BD</strong> before the campaign ends</li>
+    </ul>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tier</th><th>Max Revisions</th></tr></thead>
+        <tbody>
+          <tr><td>Tier S</td><td>2 revisions</td></tr>
+          <tr><td>Tier A</td><td>1 revision</td></tr>
+          <tr><td>Tier B, C, D</td><td>1 revision</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout callout-must">
+      <span class="callout-label">Required</span>
+      <p>Before AE presents to the client, an internal review session (AE + Media Planner + AO) must happen. This must be completed within <strong>3 BD</strong> before the presentation. This is mandatory — never skip it.</p>
+    </div>
+
+    <h2>Ad-hoc Reports — Tier S, A, B Only</h2>
+    <h3>How to Request</h3>
+    <p>Post in the Slack REPORT thread using this format:</p>
+    <pre>"Ad-hoc Report for [Campaign] - [Hubspot link] - [Reason]"</pre>
+    <p>Tag AO PIC and AO Manager/Supervisor in the same message.</p>
+    <div class="callout callout-must">
+      <span class="callout-label">Required</span>
+      <p>AO PIC must confirm understanding in writing before starting any ad-hoc report.</p>
+    </div>
+
+    <h3>Ad-hoc Turnaround Times</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tier</th><th>Turnaround</th><th>Revisions</th></tr></thead>
+        <tbody>
+          <tr><td><strong>S / A</strong></td><td>Same day if request + confirm received before noon. Otherwise within 1 BD.</td><td>1 revision allowed</td></tr>
+          <tr><td><strong>B</strong></td><td>Within 1–2 BD</td><td>No revisions</td></tr>
+          <tr><td><strong>C / D</strong></td><td>No ad-hoc service — escalate by email to Lead Team</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── APPENDIX A ── -->
+  <section class="sop-section" id="appendix-a" data-roles="AO,AE,MP">
+    <div class="not-relevant-label">Not relevant for this role</div>
+    <div class="step-label">Appendix A</div>
+    <h1>Kick-off Checklist</h1>
+    <div class="role-badges">
+      <span class="role-badge ao">AO</span>
+      <span class="role-badge ae">AE</span>
+      <span class="role-badge mp">MP</span>
+    </div>
+    <p class="section-purpose">All 11 agenda items must be covered in every kick-off meeting. Do not end the meeting until all items are confirmed.</p>
+    <p><a href="https://docs.google.com/presentation/d/19MHeTSDiFWKqbuaA6SdnKPGfGZHvVs-GPMG9zF58BgU/edit" target="_blank" rel="noopener">Open Kick-off Template</a></p>
+
+    <ul class="checklist">
+      <li>SO Sign check + Campaign ID confirmed</li>
+      <li>TikTok client info (if applicable): company name, industry, website</li>
+      <li>Objective and KPI confirmed. Achievement Rate (ceiling ACM%, overall and per-campaign) agreed.</li>
+      <li><strong>Campaign Structure</strong> (CBO/ABO, budget split, objective, targeting, tactic) — Mandatory</li>
+      <li>Way of Optimization Alignment — what AO can adjust: audience, age, budget, placement, etc.</li>
+      <li>Report format and cadence confirmed. (Looker for Tier S/A only; final vs. in-flight)</li>
+      <li>Optimization and Sync cadence — specify exact days and times. (Tier S/A only)</li>
+      <li>Timeline — flag conflicts with other clients and resolve in this session</li>
+      <li>Communication mapping — which Slack thread is used for what</li>
+      <li>Risk and Mitigation — creative delays, other timeline risks</li>
+      <li>Material and Access readiness — KOL page access, gencodes, client page, paid partnership, creative, UTM</li>
+    </ul>
+  </section>
+
+  <!-- ── APPENDIX B ── -->
+  <section class="sop-section" id="appendix-b" data-roles="AO,AE,MP">
+    <div class="not-relevant-label">Not relevant for this role</div>
+    <div class="step-label">Appendix B</div>
+    <h1>Double-Check Guideline</h1>
+    <div class="role-badges">
+      <span class="role-badge ao">AO</span>
+      <span class="role-badge ae">AE</span>
+      <span class="role-badge mp">MP</span>
+    </div>
+    <p class="section-purpose">Both Self-check and Peer-check cover the same 13 items. Complete both before sending the Ad Preview to AE.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1rem;">
+      <div>
+        <h3>Self-check — AO PIC</h3>
+        <ul class="checklist">
+          <li>Campaign objective</li>
+          <li>Budget optimization type (CBO vs. ABO)</li>
+          <li>Campaign budget (CBO)</li>
+          <li>Ad Group budget (ABO)</li>
+          <li>Start and End date</li>
+          <li>Page identity</li>
+          <li>Target audience (Gender, Age, Location, Interest, Exclusion, Custom audience, Narrow, Language)</li>
+          <li>Placement</li>
+          <li>Frequency method and limit</li>
+          <li>Creative artwork</li>
+          <li>Caption, Link, CTA</li>
+          <li>UTM Tracking</li>
+          <li>Message template</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Peer-check — Team Member</h3>
+        <ul class="checklist">
+          <li>Campaign objective</li>
+          <li>Budget optimization type (CBO vs. ABO)</li>
+          <li>Campaign budget (CBO)</li>
+          <li>Ad Group budget (ABO)</li>
+          <li>Start and End date</li>
+          <li>Page identity</li>
+          <li>Target audience (Gender, Age, Location, Interest, Exclusion, Custom audience, Narrow, Language)</li>
+          <li>Placement</li>
+          <li>Frequency method and limit</li>
+          <li>Creative artwork</li>
+          <li>Caption, Link, CTA</li>
+          <li>UTM Tracking</li>
+          <li>Message template</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── APPENDIX C ── -->
+  <section class="sop-section" id="appendix-c" data-roles="AO,AE,MP">
+    <div class="not-relevant-label">Not relevant for this role</div>
+    <div class="step-label">Appendix C</div>
+    <h1>Service for Each Client Tier</h1>
+    <div class="role-badges">
+      <span class="role-badge ao">AO</span>
+      <span class="role-badge ae">AE</span>
+      <span class="role-badge mp">MP</span>
+    </div>
+    <p class="section-purpose">The full tier service matrix shows which services apply to each client tier. Refer to this document before setting expectations with any client.</p>
+    <p><a href="https://docs.google.com/spreadsheets/d/1IMzdS6SQ79P-efxmsCxVprhLnt6vVYHxhwRxe3aeFoc/edit?usp=sharing" target="_blank" rel="noopener">AO | Client Tiering 2026 — Open Full Matrix</a></p>
+
+    <h2>Quick Summary</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Tier</th>
+            <th>Kick-off</th>
+            <th>Tech Check</th>
+            <th>Dashboard</th>
+            <th>Ad-hoc Report</th>
+            <th>Sync Session</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>S</strong></td><td>Required</td><td>Required (lower funnel)</td><td>Looker — custom</td><td>Priority / same day</td><td>Weekly</td></tr>
+          <tr><td><strong>A</strong></td><td>Required</td><td>Required (lower funnel)</td><td>Looker — standard</td><td>Priority / same day</td><td>Bi-weekly</td></tr>
+          <tr><td><strong>B</strong></td><td>Required</td><td>Required (lower funnel)</td><td>AnyAI DM or Sheets</td><td>1 time/month</td><td>—</td></tr>
+          <tr><td><strong>C</strong></td><td>Skip</td><td>Required (lower funnel)</td><td>AnyAI DM or Sheets</td><td>None</td><td>—</td></tr>
+          <tr><td><strong>D</strong></td><td>Skip</td><td>Required (lower funnel)</td><td>None</td><td>None</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── APPENDIX D ── -->
+  <section class="sop-section" id="appendix-d" data-roles="AO,AE,MP">
+    <div class="not-relevant-label">Not relevant for this role</div>
+    <div class="step-label">Appendix D</div>
+    <h1>Campaign Setup Lead Time Protocol</h1>
+    <div class="role-badges">
+      <span class="role-badge ao">AO</span>
+      <span class="role-badge ae">AE</span>
+      <span class="role-badge mp">MP</span>
+    </div>
+    <p class="section-purpose">Cut-off rules are the same as Step 1. This appendix adds the process for weekend and after-hours requests.</p>
+
+    <h2>Weekend / After-Hours Work — Tier S, A, B</h2>
+    <p>AE must send an approval request by email:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Field</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td><strong>To</strong></td><td><a href="mailto:Wirat@anymindgroup.com">Wirat@anymindgroup.com</a></td></tr>
+          <tr><td><strong>CC</strong></td><td><a href="mailto:Porntip@anymindgroup.com">Porntip@anymindgroup.com</a>, <a href="mailto:panawat.n@anymindgroup.com">panawat.n@anymindgroup.com</a>, <a href="mailto:pannarut@anymindgroup.com">pannarut@anymindgroup.com</a></td></tr>
+          <tr><td><strong>Subject</strong></td><td><code>Request for Approval of Overtime Work for Ad Optimization PIC – [Client Name] – [Campaign Name]</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Tier C / D Urgent Cases</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Field</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Subject</strong></td><td><code>Request for Approval of Urgent support for Ad Optimization PIC – [Client Name] – [Campaign Name]</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout callout-note">
+      <span class="callout-label">Limit</span>
+      <p>Maximum <strong>1 special urgent case per month</strong>. Lead Team decision is final.</p>
+    </div>
+  </section>
+
+  <!-- ── APPENDIX E ── -->
+  <section class="sop-section" id="appendix-e" data-roles="AO,AE,MP">
+    <div class="not-relevant-label">Not relevant for this role</div>
+    <div class="step-label">Appendix E</div>
+    <h1>Report Creation Protocol</h1>
+    <div class="role-badges">
+      <span class="role-badge ao">AO</span>
+      <span class="role-badge ae">AE</span>
+      <span class="role-badge mp">MP</span>
+    </div>
+    <p class="section-purpose">This appendix adds to the reporting rules in Step 5. Follow both Step 5 and this appendix for all reports.</p>
+
+    <h2>After Completing Any Monthly Report</h2>
+    <div class="callout callout-must">
+      <span class="callout-label">Required</span>
+      <p>AO PIC and all HOC PICs must save the report link to the <strong>central link repository</strong> after completing any monthly report.</p>
+    </div>
+
+    <h2>Client-Facing Sync Sessions</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>AO Level</th><th>Supervisor Requirement</th></tr></thead>
+        <tbody>
+          <tr><td><strong>AO L1 PIC</strong></td><td>Supervisor must always be on standby during the session</td></tr>
+          <tr><td><strong>AO L2 PIC</strong></td><td>Supervisor required for the first 2 sessions only</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── QUICK LINKS ── -->
+  <section class="sop-section" id="quick-links" data-roles="AO,AE,MP">
+    <div class="not-relevant-label">Not relevant for this role</div>
+    <div class="step-label">Reference</div>
+    <h1>Quick Links</h1>
+    <div class="role-badges">
+      <span class="role-badge ao">AO</span>
+      <span class="role-badge ae">AE</span>
+      <span class="role-badge mp">MP</span>
+    </div>
+
+    <h2>Documents &amp; Tools</h2>
+    <div class="links-grid">
+      <a class="link-item" href="https://docs.google.com/spreadsheets/d/1j-9nfThTcKIAb2Npxq0ABG3YonfzWySso-cZBF_J_48/edit?gid=1332768816#gid=1332768816" target="_blank" rel="noopener">
+        <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        Ad Request Sheet
+      </a>
+      <a class="link-item" href="https://docs.google.com/spreadsheets/d/1j-9nfThTcKIAb2Npxq0ABG3YonfzWySso-cZBF_J_48/edit?gid=1881615856#gid=1881615856" target="_blank" rel="noopener">
+        <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        Meta/TikTok Top-up Sheet
+      </a>
+      <a class="link-item" href="https://docs.google.com/spreadsheets/d/1j-9nfThTcKIAb2Npxq0ABG3YonfzWySso-cZBF_J_48/edit?gid=290704826#gid=290704826" target="_blank" rel="noopener">
+        <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        Google Top-up Tab
+      </a>
+      <a class="link-item" href="https://docs.google.com/spreadsheets/d/1VMZ5QlU1lST1ObnFW9WeVDWXS7UMt2P6QQimMD60Mno/edit?gid=107753256#gid=107753256" target="_blank" rel="noopener">
+        <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        Top-up Tracking Sheet
+      </a>
+      <a class="link-item" href="https://docs.google.com/presentation/d/1f_WkG5joLAXFRXjPJEDfcvqpcKtab_zUKkZvx_vKvyA/edit" target="_blank" rel="noopener">
+        <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+        Ad Preview Template
+      </a>
+      <a class="link-item" href="https://docs.google.com/presentation/d/19MHeTSDiFWKqbuaA6SdnKPGfGZHvVs-GPMG9zF58BgU/edit" target="_blank" rel="noopener">
+        <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+        Kick-off Template
+      </a>
+      <a class="link-item" href="https://lookerstudio.google.com/reporting/86ebc280-ee88-44ba-a486-2542d971f3e6/page/p_bkwr5he0zd" target="_blank" rel="noopener">
+        <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+        Looker Studio Template
+      </a>
+      <a class="link-item" href="https://docs.google.com/spreadsheets/d/1IMzdS6SQ79P-efxmsCxVprhLnt6vVYHxhwRxe3aeFoc/edit?usp=sharing" target="_blank" rel="noopener">
+        <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        Client Tiering 2026
+      </a>
+    </div>
+
+    <h2>Key Contacts</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Name / Role</th><th>Email</th></tr></thead>
+        <tbody>
+          <tr><td>Wirat — AO Lead</td><td><a href="mailto:Wirat@anymindgroup.com">Wirat@anymindgroup.com</a></td></tr>
+          <tr><td>Porntip</td><td><a href="mailto:Porntip@anymindgroup.com">Porntip@anymindgroup.com</a></td></tr>
+          <tr><td>Panawat</td><td><a href="mailto:panawat.n@anymindgroup.com">panawat.n@anymindgroup.com</a></td></tr>
+          <tr><td>Pannarut</td><td><a href="mailto:pannarut@anymindgroup.com">pannarut@anymindgroup.com</a></td></tr>
+          <tr><td>AO Team Distribution</td><td><a href="mailto:th-adopt@anymindgroup.com">th-adopt@anymindgroup.com</a></td></tr>
+          <tr><td>Planner Team Meeting</td><td><a href="mailto:planner-as-team-meeting@anymindgroup.com">planner-as-team-meeting@anymindgroup.com</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<!-- SCROLL TO TOP -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
+
+<script>
+  // ── ROLE FILTERING ──
+  function setRole(role) {
+    // Update tabs
+    document.querySelectorAll('.role-tab').forEach(function(tab) {
+      tab.classList.toggle('active', tab.dataset.role === role);
+    });
+
+    // Filter sections
+    var sections = document.querySelectorAll('.sop-section');
+    sections.forEach(function(section) {
+      var roles = section.dataset.roles ? section.dataset.roles.split(',') : [];
+      if (role === 'all' || roles.indexOf(role) !== -1) {
+        section.classList.remove('section-not-relevant');
+      } else {
+        section.classList.add('section-not-relevant');
+      }
+    });
+  }
+
+  // ── SIDEBAR ACTIVE STATE ──
+  var navItems = document.querySelectorAll('.nav-item');
+  var sections = document.querySelectorAll('.sop-section');
+
+  function getScrollContainer() {
+    return window;
+  }
+
+  function updateActiveNav() {
+    var scrollY = window.scrollY || window.pageYOffset;
+    var headerH = 56;
+    var current = null;
+
+    sections.forEach(function(section) {
+      var top = section.getBoundingClientRect().top + scrollY - headerH - 20;
+      if (scrollY >= top) {
+        current = section.id;
+      }
+    });
+
+    navItems.forEach(function(item) {
+      var href = item.getAttribute('href');
+      item.classList.toggle('active', href === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNav, {passive: true});
+  updateActiveNav();
+
+  // ── SCROLL TO TOP BUTTON ──
+  var scrollTopBtn = document.getElementById('scroll-top');
+  window.addEventListener('scroll', function() {
+    scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+  }, {passive: true});
+
+  // ── SMOOTH SCROLL FOR NAV ITEMS ──
+  navItems.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        var target = document.querySelector(href);
+        if (target) {
+          var top = target.getBoundingClientRect().top + window.scrollY - 56 - 24;
+          window.scrollTo({top: top, behavior: 'smooth'});
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
